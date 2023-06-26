@@ -12,6 +12,7 @@ resource "google_sql_database_instance" "instance" {
 }
 
 resource "google_sql_database" "database" {
-  name     = "my-database"
+  name     = "db1"
   instance = google_sql_database_instance.instance.name
+collation = "sql_latin1_general_cp1_ci_as"
 }
